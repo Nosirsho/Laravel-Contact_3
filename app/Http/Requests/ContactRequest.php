@@ -13,7 +13,7 @@ class ContactRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:50',
+            'phone' => 'required|numeric'
+        ];
+    }
+    public function messages()
+    {
+        return[
+            'name.required' => 'Заполните имя контакта',
+
+            'phone.required' => 'Заполните номер телефона контакта',
+
+            'phone.numeric' => 'Номер толефона должен содержать только цыфры'
         ];
     }
 }

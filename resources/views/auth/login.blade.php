@@ -9,12 +9,12 @@
         <div class="col-md-4">
             <div class="card">
 <article class="card-body">
-<h4 class="card-title mb-4 mt-1">Sign in</h4>
+<h4 class="card-title mb-4 mt-1">Вход</h4>
 	 <form method="POST" action="{{ route('login') }}">
          @csrf
     <div class="form-group">
 
-        <label for="email" >{{ __('E-Mail Address') }}</label>
+        <label for="email" >E-Mail</label>
 
         <div>
             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
@@ -29,7 +29,7 @@
 
 
     <div class="form-group">
-        <label for="password">{{ __('Password') }}</label>
+        <label for="password">Пароль</label>
 
         <div>
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="*********">
@@ -48,7 +48,7 @@
                 <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                 <label class="form-check-label" for="remember">
-                    {{ __('Remember Me') }}
+                    Запомнить
                 </label>
             </div>
     </div>
@@ -56,7 +56,7 @@
     <div class="form-group">
 
             <button type="submit" class="btn btn-primary btn-block">
-                {{ __('Login') }}
+                Войти
             </button>
 
 
