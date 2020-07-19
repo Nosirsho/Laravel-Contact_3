@@ -52,7 +52,7 @@ class UserController extends Controller
             // Не успешный ответ
             return response()->json([
                 'status' => false
-                ])->setStatusCode(401);
+                ])->setStatusCode(401, 'Not authorized');
         }
     }
 
