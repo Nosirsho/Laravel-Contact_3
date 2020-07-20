@@ -25,7 +25,7 @@ class ContactRequest extends FormRequest
     {
         return [
             'name' => 'required|max:50',
-            'phone' => 'required|numeric'
+            'phone' => 'required'
         ];
     }
     public function messages()
@@ -35,7 +35,6 @@ class ContactRequest extends FormRequest
 
             'phone.required' => 'Заполните номер телефона контакта',
 
-            'phone.numeric' => 'Номер толефона должен содержать только цыфры'
         ];
     }
 }

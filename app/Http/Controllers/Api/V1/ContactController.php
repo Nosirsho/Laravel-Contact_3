@@ -128,7 +128,7 @@ class ContactController extends Controller
             return response()->json([
                 'status' => true,
                 'contact' => $contact
-            ])->setStatusCode(200, 'Contact deleted');
+            ])->setStatusCode(200, 'Contact updated');
 
         }else{
             //Не успешный ответ
